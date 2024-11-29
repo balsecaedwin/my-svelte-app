@@ -1,3 +1,23 @@
+# netlify.toml
+
 [build]
+  # Comando para construir el proyecto
   command = "npm run build"
-  publish = "public"
+
+  # Directorio donde se encuentran los archivos estáticos generados
+  publish = "public" # Cambia esto si tu directorio de salida es diferente
+
+# Configuración de redirecciones (opcional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+# Configuración de funciones (opcional)
+[functions]
+  directory = "functions" # Cambia esto si tienes funciones serverless en una carpeta diferente
+
+# Variables de entorno (opcional)
+[build.environment]
+  NODE_VERSION = "14" # Especifica la versión de Node.js si es necesario
