@@ -5,7 +5,7 @@
   command = "npm run build"
 
   # Directorio donde se encuentran los archivos estáticos generados
-  publish = "public" # Cambia esto si tu directorio de salida es diferente
+  publish = "dist" # Cambia esto si tu directorio de salida es diferente
 
 # Configuración de redirecciones (opcional)
 [[redirects]]
